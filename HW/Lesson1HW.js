@@ -18,8 +18,9 @@ console.log('Task 3');
 
 let name = 'Yarik';
 
-if(name == 'Yarik') {
+if(name === 'Yarik') {
     console.log(`Привет, ${name}`);
 } else {
     console.log('Ошибка, не тот тип данных');
 }
+
