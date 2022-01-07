@@ -24,3 +24,37 @@ if(name === 'Yarik') {
     console.log('Ошибка, не тот тип данных');
 }
 
+console.log('Task 4');
+
+console.log((name === 'Yarik') ? `Привет, ${name}` : 'Ошибка, не тот тип данных');
+
+console.log('Task 5');
+
+let n = 7;
+let fDayOff;
+
+switch (n) {
+    case 1:
+        fDayOff = false;
+        break;
+    case 2:
+        fDayOff = false;
+        break;
+    case 3:
+        fDayOff = false;
+        break;
+    case 4:
+        fDayOff = false;
+        break;
+    case 5:
+        fDayOff = false;
+        break;
+    case 6:
+        fDayOff = true;
+        break;
+    case 7:
+        fDayOff = true;
+        break;
+}
+
+console.log(fDayOff);
