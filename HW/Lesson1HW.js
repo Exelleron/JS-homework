@@ -16,11 +16,13 @@ console.log(typeof Symbol('ip'));
 
 console.log('Task 3');
 
-let name = 'Yarik';
+let name = prompt('Введите имя', '');
 
-if(name === 'Yarik') {
+if(name) {
+    alert(`Привет, ${name}`);
     console.log(`Привет, ${name}`);
 } else {
+    alert('Ошибка, имя не указано');
     console.log('Ошибка, не тот тип данных');
 }
 
@@ -28,7 +30,7 @@ if(name === 'Yarik') {
 
 console.log('Task 4');
 
-console.log((name === 'Yarik') ? `Привет, ${name}` : 'Ошибка, не тот тип данных');
+console.log((name) ? `Привет, ${name}` : 'Ошибка, не тот тип данных');
 
 /////////////////////////////////////////
 
