@@ -18,7 +18,7 @@ console.log('Task 3');
 
 let name = prompt('Введите имя', '');
 
-if(name) {
+if(typeof name == 'string') {
     alert(`Привет, ${name}`);
     console.log(`Привет, ${name}`);
 } else {
@@ -30,7 +30,7 @@ if(name) {
 
 console.log('Task 4');
 
-console.log((name) ? `Привет, ${name}` : 'Ошибка, не тот тип данных');
+console.log((typeof name == 'string') ? `Привет, ${name}` : 'Ошибка, не тот тип данных');
 
 /////////////////////////////////////////
 
@@ -41,25 +41,17 @@ let fDayOff;
 
 switch (n) {
     case 1:
-        fDayOff = false;
-        break;
     case 2:
-        fDayOff = false;
-        break;
     case 3:
-        fDayOff = false;
-        break;
     case 4:
-        fDayOff = false;
-        break;
     case 5:
         fDayOff = false;
+        console.log('This is work days');
         break;
     case 6:
-        fDayOff = true;
-        break;
     case 7:
         fDayOff = true;
+        console.log('This is weekdays');
         break;
 }
 
