@@ -21,15 +21,26 @@ hello2('Vasiliy');
 
 ////////////////////////////////////////
 
-// console.log('Task 3');
-//
-// function addOneForAll(...args) {
-//     args.map(function (num) {
-//         return num++;
-//     })
-// }
-//
-// let val = addOneForAll(1, 2, 3, 4);
-//
-// console.log(val);
-// console.log(addOneForAll(1,2,3,4));
+console.log('Task 3');
+
+function addOneForAll(...args) {
+    return args.map(function(num) {
+        return num + 1;
+    })
+}
+
+let val = addOneForAll(0, 2, 6, 99);
+console.log(val);
+
+//////////////////////////////////////
+
+console.log('Task 4');
+
+let result;
+for (let i = 0;;) {
+    if (Math.random() > 0.9) {
+        break;
+    }
+}
+
+console.log(result);
