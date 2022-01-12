@@ -49,4 +49,30 @@ console.log(result);
 
 console.log('Task 5');
 
+function chess(square = 8) {
+    let black = '#';
+    let white = '!';
+    let cheese = '';
+    for (let i = 0; i < square; i++) { //Линия 1.
+        for (let j = 0; j < square; j++) { //Клетка .1
+            if (i % 2 !== 0) {
+                if (j % 2 === 0) {
+                    cheese += black;
+                } else {
+                    cheese += white;
+                }
+            }
+            if (i % 2 === 0) {
+                if (j % 2 !== 0) {
+                    cheese += black;
+                } else {
+                    cheese += white;
+                }
+            }
+        }
+        cheese += '\n';
+    }
+    return cheese;
+}
 
+console.log(chess());
