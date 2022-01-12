@@ -36,11 +36,17 @@ console.log(val);
 
 console.log('Task 4');
 
-let result;
-for (let i = 0;;) {
+let result = 0;
+
+for (;;) {
+    result++;
     if (Math.random() > 0.9) {
         break;
     }
 }
-
 console.log(result);
+
+
+console.log('Task 5');
+
+
