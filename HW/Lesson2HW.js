@@ -85,8 +85,16 @@ function cubesCalculate(count) {
     for (let i = 1; i <= count; i++) {
         result.push(Math.pow(i, 3));
     }
-
     return result;
 }
 
 console.log(cubesCalculate(6));
+
+console.log('Task7');
+
+function onlyNumbArr(array) {
+    return array.filter(function (arrayElement) {
+        return typeof arrayElement === 'number';
+    })
+}
+console.log(onlyNumbArr([1, 'hello', 2, 3, 4, '5', '6', 7, null]));
