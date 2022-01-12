@@ -16,6 +16,9 @@ function hello2(name) {
         console.log('Hello, anonymous');
     }
 }
+// function hello2(name) {
+//     console.log(`Hello, ${name || "anonymous"}`);
+// }
 
 hello2('Vasiliy');
 
@@ -37,7 +40,6 @@ console.log(val);
 console.log('Task 4');
 
 let result = 0;
-
 for (;;) {
     result++;
     if (Math.random() > 0.9) {
@@ -49,12 +51,14 @@ console.log(result);
 
 console.log('Task 5');
 
+////////////////////////////////////
+
 function chess(square = 8) {
     let black = '#';
     let white = '!';
     let cheese = '';
-    for (let i = 0; i < square; i++) { //Линия 1.
-        for (let j = 0; j < square; j++) { //Клетка .1
+    for (let i = 0; i < square; i++) {
+        for (let j = 0; j < square; j++) {
             if (i % 2 !== 0) {
                 if (j % 2 === 0) {
                     cheese += black;
@@ -77,6 +81,8 @@ function chess(square = 8) {
 
 console.log(chess());
 
+///////////////////////////////////////
+
 console.log('Task 6');
 
 function cubesCalculate(count) {
@@ -90,7 +96,9 @@ function cubesCalculate(count) {
 
 console.log(cubesCalculate(6));
 
-console.log('Task7');
+////////////////////////////////
+
+console.log('Task 7');
 
 function onlyNumbArr(array) {
     return array.filter(function (arrayElement) {
@@ -98,3 +106,22 @@ function onlyNumbArr(array) {
     })
 }
 console.log(onlyNumbArr([1, 'hello', 2, 3, 4, '5', '6', 7, null]));
+
+////////////////////////////////
+
+console.log('Task 8');
+
+function multiply(a, b) {
+    let multiplyTable = [null];
+    for (let i = 1; i <= 10; i++) {
+        let multiplyResult = [null];
+        for (let j = 1; j <= 10; j++) {
+            multiplyResult.push(i * j)
+        }
+        multiplyTable.push(multiplyResult);
+    }
+
+    return multiplyTable[a][b]
+}
+
+console.log(multiply(5,6));
