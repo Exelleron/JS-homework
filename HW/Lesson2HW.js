@@ -76,3 +76,17 @@ function chess(square = 8) {
 }
 
 console.log(chess());
+
+console.log('Task 6');
+
+function cubesCalculate(count) {
+    let result = [];
+
+    for (let i = 1; i <= count; i++) {
+        result.push(Math.pow(i, 3));
+    }
+
+    return result;
+}
+
+console.log(cubesCalculate(6));
