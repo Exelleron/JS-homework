@@ -46,10 +46,9 @@ for (;;) {
 }
 console.log(result);
 
+////////////////////////////////////
 
 console.log('Task 5');
-
-////////////////////////////////////
 
 function chess(square = 8) {
     let black = '#';
