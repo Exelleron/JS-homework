@@ -16,9 +16,6 @@ function hello2(name) {
         console.log('Hello, anonymous');
     }
 }
-// function hello2(name) {
-//     console.log(`Hello, ${name || "anonymous"}`);
-// }
 
 hello2('Vasiliy');
 
@@ -45,6 +42,7 @@ for (;;) {
     if (Math.random() > 0.9) {
         break;
     }
+    alert(result);
 }
 console.log(result);
 
