@@ -12,3 +12,14 @@ function numbersToSquare(a){
 numbersToSquare(4);
 
 /////////////////////////////////////
+
+console.log('Task 2');
+
+function avg2(a, b) {
+    return console.log((a + b) / 2);
+}
+
+avg2(5, 10);
+
+//////////////////////////////////
+
