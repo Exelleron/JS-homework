@@ -56,3 +56,63 @@ function newElementToObject(key, value, obj) {
 }
 console.log(newElementToObject('name', 'Yarik', object));
 console.log(newElementToObject('name', 'Pasha', object));
+
+//////////////////////////////////////
+
+// console.log('Task 5');
+//
+// let infinityConfirm = () => {
+//     if (confirm('Click OK') === false){
+//         while (true){
+//             confirm('Click OK');
+//         }
+//     }
+// };
+//
+// console.log(infinityConfirm());
+
+//////////////////////////////////
+
+console.log('Task 6');
+
+let randomArr = [-2, 5, 3, 2, -6, '2', 3];
+
+function sumOfArr(arg) {
+    let sum = 0;
+        for (let i = 0; i < arg.length; i++){
+            if (typeof arg[i] === 'number'){
+                sum += arg[i];
+            }
+        }
+    return sum;
+}
+console.log(sumOfArr(randomArr));
+
+randomArr.sort(function (a, b) {
+    if (a < b){
+        return 1;
+    }
+    if (a > b){
+        return -1;
+    }
+    return 0;
+});
+
+console.log(randomArr);
+
+function positiveArr(arg) {
+    return arg > 0;
+}
+
+console.log(randomArr.filter(positiveArr));
+
+function arrPlusTen(arg) {
+    for (let i = 0; i < arg.length; i++){
+        if (typeof arg[i] === 'number'){
+            arg[i] += 10;
+        }
+    }
+    return arg;
+}
+
+console.log(arrPlusTen(randomArr),'arrPlusTen');
