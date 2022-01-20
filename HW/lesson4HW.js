@@ -1,6 +1,6 @@
 console.log('Task 1');
 
-const user = {
+const user1 = {
     name: 'Yarik',
     birthDate: '1997.01.01',
 };
@@ -15,7 +15,8 @@ function bindFunc(foo, context, ...arg) {
     }
     return "foo is not a function";
 }
-bindFunc(whenBirthday, user, 1,2,3,4,5);
+
+bindFunc(whenBirthday, user1, 1,2,3,4,5);
 
 
 /////////////////////////////
@@ -26,7 +27,7 @@ function countKeys() {
     return Object.keys(this).length;
 }
 
-console.log(countKeys.call(user));
+console.log(countKeys.call(user1));
 
 /////////////////////////////
 
@@ -48,3 +49,5 @@ function arrayFromObject() {
 }
 
 console.log(arrayFromObject.call(valObject0));
+
+///////////////////////////////////////
