@@ -1,26 +1,27 @@
-// console.log('Task 1');
-//
-// function multiplyTable() {
-//     let table, grid;
-//     table = document.createElement('table');
-//     for (let i = 1; i < 10; i++) {
-//         const row = document.createElement('tr');
-//         for (let j = 1; j < 10; j++) {
-//             const col = document.createElement('td');
-//             let sum = i * j;
-//             if (sum === 0) {
-//                 sum = i || j;
-//                 sum = sum ? sum : '';
-//                 col.classList.add('div');
-//             }
-//             col.innerHTML = sum;
-//             row.appendChild(col);
-//         }
-//         table.appendChild(row);
-//     }
-// }
-//
-// console.log(multiplyTable());
+console.log('Task 1');
+
+function multiplyTable() {
+    let body = document.querySelector('body')
+    let table = document.createElement('table');
+    for (let i = 0; i < 10; i++) {
+        const row = document.createElement('tr');
+        for (let j = 0; j < 10; j++) {
+            const col = document.createElement('td');
+            let sum = i * j;
+            if (sum === 0) {
+                sum = i || j;
+                sum = sum ? sum : '0';
+            }
+            col.innerHTML = sum;
+            row.appendChild(col);
+        }
+        table.appendChild(row);
+    }
+    console.log(body);
+    body.appendChild(table);
+}
+
+console.log(multiplyTable());
 
 ////////////////////////////////
 
@@ -45,60 +46,66 @@ console.log(getUnique(anyArr));
 
 console.log('Task 3');
 
-function counter(x){
-    return function (y) {
-        return x + y;
+function counter(){
+    let y = null;
+    function neCounter(x) {
+        y = y ? x + y : x;
+        return y;
     }
+    return neCounter;
 }
-let a = counter(2);
+let count = counter();
 
-console.log(a(5));
+
+console.log(count(3));
+console.log(count(5));
+console.log(count(228));
 
 ///////////////////////////////////
 
 console.log('Task 4');
 
-class Calculator {
-    constructor(){
-        this.firstNumber = '';
-        this.secondNumber = '';
-        this.sign = '';
-        this.result = 0;
-    }
-    read(){
-        this.firstNumber = prompt('Введите первое число');
-        this.secondNumber = prompt('Введите второе число число');
-    }
-    setAction(){
-        while (true){
-            this.sign = prompt('Введите действие');
-            if ((this.sign  === '+') || (this.sign === '-') || (this.sign === '*') || (this.sign === '/')){
-                break;
-            }
-            alert('Используйте только +, -, * или /');
-        }
-    }
-    doAction(){
-        if (this.sign === '+'){
-            this.result = Number(this.firstNumber) + Number(this.secondNumber);
-        }
-        if (this.sign === '-'){
-            this.result = Number(this.firstNumber) - Number(this.secondNumber);
-        }
-        if (this.sign === '*'){
-            this.result = Number(this.firstNumber) * Number(this.secondNumber);
-        }
-        if (this.sign === '/'){
-            this.result = Number(this.firstNumber) / Number(this.secondNumber);
-        }
+// class Calculator {
+//     constructor(){
+//         this.firstNumber = '';
+//         this.secondNumber = '';
+//         this.sign = '';
+//         this.result = 0;
+//     }
+//     read(){
+//         this.firstNumber = prompt('Введите первое число');
+//         this.secondNumber = prompt('Введите второе число число');
+//     }
+//     setAction(){
+//         while (true){
+//             this.sign = prompt('Введите действие');
+//             if ((this.sign  === '+') || (this.sign === '-') || (this.sign === '*') || (this.sign === '/')){
+//                 break;
+//             }
+//             alert('Используйте только +, -, * или /');
+//         }
+//     }
+//     doAction(){
+//         if (this.sign === '+'){
+//             this.result = Number(this.firstNumber) + Number(this.secondNumber);
+//         }
+//         if (this.sign === '-'){
+//             this.result = Number(this.firstNumber) - Number(this.secondNumber);
+//         }
+//         if (this.sign === '*'){
+//             this.result = Number(this.firstNumber) * Number(this.secondNumber);
+//         }
+//         if (this.sign === '/'){
+//             this.result = Number(this.firstNumber) / Number(this.secondNumber);
+//         }
+//
+//         return isNaN(this.result) ? alert('Нужно вводить цифры') : this.result;
+//     }
+// }
 
-        return isNaN(this.result) ? alert('Нужно вводить цифры') : this.result;
-    }
-}
-
-const calculator = new Calculator();
-calculator.read();
-calculator.setAction();
-const result = calculator.doAction();
-
-console.log(result);
+// const calculator = new Calculator();
+// calculator.read();
+// calculator.setAction();
+// const result = calculator.doAction();
+//
+// console.log(result);
